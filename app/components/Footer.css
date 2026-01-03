@@ -1,0 +1,7 @@
+/* Add background to logo area in footer for dark theme */
+[data-theme="dark"] .footer-logo-container {
+  background-color: rgba(255, 255, 255, 0.100);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+

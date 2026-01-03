@@ -1,0 +1,30 @@
+.particle-container {
+  position: relative;
+  overflow: visible;
+  z-index: auto;
+}
+
+.particle::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(var(--glow-color, 255, 255, 255), 0.2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.particle-container:hover {
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(var(--glow-color, 255, 255, 255), 0.1);
+}
+
+[data-theme="light"] .particle-container:hover {
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 0 30px rgba(0, 0, 0, 0.05);
+}
+

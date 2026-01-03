@@ -1,0 +1,61 @@
+.stack-container {
+  position: relative;
+  width: 40%;
+  height: 50%;
+ 
+}
+
+.card-rotate,
+.card-rotate-disabled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none; /* Prevents scrolling on mobile while dragging cards */
+}
+
+.card-rotate:active {
+  cursor: grabbing;
+}
+
+.card {
+  width: 300%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Custom scrollbar for cards */
+.card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
