@@ -5,3 +5,56 @@
   backdrop-filter: blur(10px);
 }
 
+/* Mobile: Logo and company name side by side */
+@media (max-width: 768px) {
+  .footer-logo-text-wrapper {
+    flex-direction: row !important;
+    gap: 0rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .footer-logo {
+    height: 50px !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-right: 0 !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .footer-company-name {
+    font-size: clamp(0.6rem, 2.5vw, 0.9rem) !important;
+    line-height: 1.2 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.05em !important;
+  }
+  
+  .footer-logo-container {
+    padding: 1rem 0.5rem !important;
+  }
+  
+  .footer-logo-container p {
+    margin-top: 0 !important;
+    text-align: center !important;
+  }
+  
+  .footer-tagline {
+    margin-top: 0.2rem !important;
+  }
+}
+
+/* Reduce gap between company name and tagline on all screens */
+.footer-logo-container {
+  gap: 0.3rem !important;
+}
+
+.footer-tagline {
+  margin-top: 0.2rem !important;
+}
+

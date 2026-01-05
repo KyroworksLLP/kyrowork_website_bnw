@@ -185,7 +185,7 @@ export default function Hero() {
                   <h3 style={{ marginBottom: '1rem', marginTop: '0' }}>WHY IT MATTERS</h3>
                   <TextReveal delay={0.2}>
                     <p style={{ lineHeight: '1.6', color: 'var(--text-primary)', margin: 0 }}>
-                      Businesses today face complexity and rapid change. We create solutions that don't just work, but work for you—helping you automate, innovate, and elevate with confidence. Our goal: enable growth and impact for every business we serve.
+                      Businesses today face complexity and rapid change. We create solutions that don&apos;t just work, but work for you—helping you automate, innovate, and elevate with confidence. Our goal: enable growth and impact for every business we serve.
                     </p>
                   </TextReveal>
                 </ParticleCard>

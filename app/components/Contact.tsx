@@ -14,11 +14,11 @@ export default function Contact() {
       justifyContent: 'center'
     }}>
       <div style={{ maxWidth: '800px', width: '100%', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.9rem', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>
+        <p style={{ fontSize: '0.7rem', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>
           <SplitText>Contact Us</SplitText>
         </p>
         <h2 style={{ marginBottom: '1rem' }}>
-          <SplitText>Let's build something together</SplitText>
+          <SplitText>Let's Build Something Together</SplitText>
         </h2>
         <TextReveal>
           <p style={{ fontSize: '1.1rem', marginBottom: '3rem', lineHeight: '1.6' }}>

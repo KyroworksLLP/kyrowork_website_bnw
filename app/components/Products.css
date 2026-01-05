@@ -1,3 +1,37 @@
+/* Desktop: Center the CardSwap and prevent overflow */
+.products-card-swap-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+.products-card-swap-wrapper .card-swap-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 1024px) {
+  .products-card-swap-wrapper {
+    margin-left: 0 !important;
+    margin-top: 10rem !important;
+    margin-bottom: 2rem !important;
+    height: 550px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .products-card-swap-wrapper .card-swap-container {
+    width: 100% !important;
+    max-width: 85% !important;
+    margin: 0 auto !important;
+  }
+}
+
 /* Mobile-specific styles for Products CardSwap wrapper */
 @media (max-width: 768px) {
   .products-card-swap-wrapper {

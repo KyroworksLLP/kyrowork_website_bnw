@@ -29,9 +29,11 @@ export default function Journey() {
           <Stepper
             initialStep={1}
             onStepChange={(step) => {
-              console.log(step);
+              // Step completed
             }}
-            onFinalStepCompleted={() => console.log("All steps completed!")}
+            onFinalStepCompleted={() => {
+              // All steps completed
+            }}
             backButtonText="Previous"
             nextButtonText="Next"
           >

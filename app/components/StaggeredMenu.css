@@ -384,7 +384,9 @@
     color 0.25s;
   display: inline-block;
   text-decoration: none;
-  padding-right: 1.4em;
+  padding-right: 3.5em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .staggered-menu-panel .sm-socials-list .sm-socials-link {
@@ -424,7 +426,7 @@
   content: counter(smItem, decimal-leading-zero);
   position: absolute;
   top: 50%;
-  right: 2.8em;
+  right: 0.5em;
   transform: translateY(-50%);
   font-size: 18px;
   font-weight: 400;
@@ -434,6 +436,43 @@
   user-select: none;
   opacity: var(--sm-num-opacity, 0);
   line-height: 1;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments for menu item numbers */
+@media (max-width: 1024px) {
+  .sm-panel-item {
+    padding-right: 3em;
+  }
+  
+  .sm-panel-list[data-numbering] .sm-panel-item::after {
+    right: 0.3em;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sm-panel-item {
+    padding-right: 2.5em;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  }
+  
+  .sm-panel-list[data-numbering] .sm-panel-item::after {
+    right: 0.2em;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sm-panel-item {
+    padding-right: 2.2em;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  
+  .sm-panel-list[data-numbering] .sm-panel-item::after {
+    right: 0.1em;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 1024px) {

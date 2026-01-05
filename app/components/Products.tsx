@@ -6,6 +6,7 @@ import TextReveal from './TextReveal';
 import ParticleCard from './MagicBento';
 import ClickSpark from './ClickSpark';
 import { useThemeFromDOM } from './useThemeFromDOM';
+import Link from 'next/link';
 import './Products.css';
 
 export default function Products() {
@@ -14,7 +15,7 @@ export default function Products() {
 
   const products = [
     {
-      title: 'AEO Brand Tracker',
+      title: 'AURA',
       audience: 'For Marketing Teams & Agencies',
       description: 'Track Awareness, Engagement, and Outcomes with AI-powered dashboards—no spreadsheets needed.',
       capabilities: ['SaaS', 'AI Insights', 'Secure Collaboration'],
@@ -54,9 +55,12 @@ export default function Products() {
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
+      overflow: 'hidden',
+      width: '100%',
+      maxWidth: '100%'
     }}>
-      <div style={{ maxWidth: '1400px', width: '100%' }}>
+      <div style={{ maxWidth: '1400px', width: '100%', overflow: 'hidden' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <p style={{ fontSize: '0.9rem', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>
             <SplitText>OUR PRODUCTS</SplitText>
@@ -73,7 +77,7 @@ export default function Products() {
 
         <div 
           className="products-card-swap-wrapper"
-          style={{ height: '600px', position: 'relative', marginTop: '15rem', marginLeft: '25rem', marginBottom: '2rem'}}
+          style={{ height: '600px', position: 'relative', marginTop: '15rem', marginLeft: '0', marginBottom: '2rem', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'}}
         >
           <CardSwap
             cardDistance={60}
@@ -134,45 +138,73 @@ export default function Products() {
                     </div>
                         <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
                           {product.ctas.map((cta, i) => {
-                            const isViewDashboard = cta === 'View Dashboard' && product.title === 'AEO Brand Tracker';
-                            return isViewDashboard ? (
-                              <a
-                                key={i}
-                                href="/AURA"
-                                className="cursor-target"
-                                style={{
-                                  padding: '0.75rem 1.5rem',
-                                  border: 'none',
-                                  borderRadius: '8px',
-                                  background: 'var(--accent)',
-                                  color: 'var(--bg-primary)',
-                                  cursor: 'pointer',
-                                  fontSize: '0.9rem',
-                                  fontWeight: '500',
-                                  textDecoration: 'none',
-                                  display: 'inline-block'
-                                }}
-                              >
-                                {cta}
-                              </a>
-                            ) : (
-                              <button
-                                key={i}
-                                className="cursor-target"
-                                style={{
-                                  padding: '0.75rem 1.5rem',
-                                  border: i === 0 ? 'none' : '1px solid var(--border)',
-                                  borderRadius: '8px',
-                                  background: i === 0 ? 'var(--accent)' : 'transparent',
-                                  color: i === 0 ? 'var(--bg-primary)' : 'var(--text-primary)',
-                                  cursor: 'pointer',
-                                  fontSize: '0.9rem',
-                                  fontWeight: '500'
-                                }}
-                              >
-                                {cta}
-                              </button>
-                            );
+                            const isViewDashboard = cta === 'View Dashboard' && product.title === 'AURA';
+                            const isRequestDemo = cta === 'Request Demo';
+                            
+                            if (isViewDashboard) {
+                              return (
+                                <Link
+                                  key={i}
+                                  href="/AURA"
+                                  className="cursor-target"
+                                  style={{
+                                    padding: '0.75rem 1.5rem',
+                                    border: 'none',
+                                    borderRadius: '8px',
+                                    background: 'var(--accent)',
+                                    color: 'var(--bg-primary)',
+                                    cursor: 'pointer',
+                                    fontSize: '0.9rem',
+                                    fontWeight: '500',
+                                    textDecoration: 'none',
+                                    display: 'inline-block'
+                                  }}
+                                >
+                                  {cta}
+                                </Link>
+                              );
+                            } else if (isRequestDemo) {
+                              return (
+                                <a
+                                  key={i}
+                                  href={`mailto:contact@kyrowork.com?subject=Request Demo - ${product.title}`}
+                                  className="cursor-target"
+                                  style={{
+                                    padding: '0.75rem 1.5rem',
+                                    border: i === 0 ? 'none' : '1px solid var(--border)',
+                                    borderRadius: '8px',
+                                    background: i === 0 ? 'var(--accent)' : 'transparent',
+                                    color: i === 0 ? 'var(--bg-primary)' : 'var(--text-primary)',
+                                    cursor: 'pointer',
+                                    fontSize: '0.9rem',
+                                    fontWeight: '500',
+                                    textDecoration: 'none',
+                                    display: 'inline-block'
+                                  }}
+                                >
+                                  {cta}
+                                </a>
+                              );
+                            } else {
+                              return (
+                                <button
+                                  key={i}
+                                  className="cursor-target"
+                                  style={{
+                                    padding: '0.75rem 1.5rem',
+                                    border: i === 0 ? 'none' : '1px solid var(--border)',
+                                    borderRadius: '8px',
+                                    background: i === 0 ? 'var(--accent)' : 'transparent',
+                                    color: i === 0 ? 'var(--bg-primary)' : 'var(--text-primary)',
+                                    cursor: 'pointer',
+                                    fontSize: '0.9rem',
+                                    fontWeight: '500'
+                                  }}
+                                >
+                                  {cta}
+                                </button>
+                              );
+                            }
                           })}
                         </div>
                   </ParticleCard>

@@ -18,7 +18,7 @@ export default function Mission() {
     },
     {
       title: 'Building Beyond Borders',
-      content: "We're not just building products—we're building a winning team. Our mission is to attract global expertise and empower local talent, creating a culture of innovation, collaboration, and excellence that drives businesses forward worldwide."
+      content: "We&apos;re not just building products—we&apos;re building a winning team. Our mission is to attract global expertise and empower local talent, creating a culture of innovation, collaboration, and excellence that drives businesses forward worldwide."
     }
   ];
 
@@ -68,7 +68,7 @@ export default function Mission() {
                   <h3 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>Building Beyond Borders</h3>
                   <TextReveal delay={0.2}>
                     <p style={{ lineHeight: '1.8', fontSize: '1rem', textAlign: 'center', margin: 0 }}>
-                      We're not just building products—we're building a winning team. Our mission is to attract global expertise and empower local talent, creating a culture of innovation, collaboration, and excellence that drives businesses forward worldwide.
+                      We&apos;re not just building products—we&apos;re building a winning team. Our mission is to attract global expertise and empower local talent, creating a culture of innovation, collaboration, and excellence that drives businesses forward worldwide.
                     </p>
                   </TextReveal>
                 </ParticleCard>

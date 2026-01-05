@@ -35,11 +35,11 @@ export default function Impact() {
             <SplitText>Our Impact</SplitText>
           </p>
           <h2 style={{ marginBottom: '1rem' }}>
-            <SplitText>What We're Striving to Acheive</SplitText>
+            <SplitText>What We&apos;re Striving to Acheive</SplitText>
           </h2>
           <TextReveal>
             <p style={{ fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
-              We're building tools that save time, reduce manual work, and help businesses focus on growth. Here's what drives us and the impact we're creating.
+              We&apos;re building tools that save time, reduce manual work, and help businesses focus on growth. Here&apos;s what drives us and the impact we&apos;re creating.
             </p>
           </TextReveal>
         </div>

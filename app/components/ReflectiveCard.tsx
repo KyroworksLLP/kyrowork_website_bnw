@@ -52,7 +52,10 @@ const ReflectiveCard = ({
           videoRef.current.srcObject = stream;
         }
       } catch (err) {
-        console.error('Error accessing webcam:', err);
+        // Webcam access failed - gracefully handle without console error in production
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Error accessing webcam:', err);
+        }
       }
     };
 

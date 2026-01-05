@@ -80,7 +80,10 @@ export default function AEODashboard() {
               </Link>
             </ClickSpark>
             <ClickSpark>
-              <button
+              <a
+                href="https://www.aura.kyrowork.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-target"
                 style={{
                   padding: '1rem 2rem',
@@ -90,11 +93,13 @@ export default function AEODashboard() {
                   color: 'var(--text-primary)',
                   cursor: 'pointer',
                   fontSize: '1rem',
-                  fontWeight: '600'
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  display: 'inline-block'
                 }}
               >
                 Run Your First AURA Report
-              </button>
+              </a>
             </ClickSpark>
           </div>
         </div>
@@ -366,7 +371,10 @@ export default function AEODashboard() {
             </p>
           </TextReveal>
           <ClickSpark>
-            <button
+            <a
+              href="https://www.aura.kyrowork.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-target"
               style={{
                 padding: '1.25rem 2.5rem',
@@ -377,13 +385,15 @@ export default function AEODashboard() {
                 cursor: 'pointer',
                 fontSize: '1.1rem',
                 fontWeight: '600',
-                transition: 'opacity 0.3s ease'
+                transition: 'opacity 0.3s ease',
+                textDecoration: 'none',
+                display: 'inline-block'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.9'; }}
               onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
             >
               Generate My AI Visibility Report Now
-            </button>
+            </a>
           </ClickSpark>
         </div>
       </section>
